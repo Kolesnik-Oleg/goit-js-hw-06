@@ -14,4 +14,4 @@ function handlerSubmit(event) {
         console.log(data)
     }
     formLogin.reset()
-}
+};
