@@ -6,10 +6,12 @@ function getRandomHexColor() {
 
 const btnEl = document.querySelector('.change-color')
 const spanEl = document.querySelector('.color')
-const bodyEl = document.querySelector('body')
+const bodyEl = document.querySelector(".widget")
 
-const changeBagColor = (event) => {
-  bodyEl.style.backgroundColor = getRandomHexColor()
-  spanEl.textContent = bodyEl.style.backgroundColor
+btnEl.addEventListener("click", handlerChangeColor);
+
+function handlerChangeColor() {
+  const randomColor = getRandomHexColor();
+  document.body.style.backgroundColor = randomColor;
+  spanEl.textContent = randomColor;
 }
-btnEl.addEventListener('click',changeBagColor)
